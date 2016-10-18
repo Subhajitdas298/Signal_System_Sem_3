@@ -18,7 +18,7 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 
-%% get reverse sequence
+%% get reverse sequence by function call
 [n_rev,seq_rev] = timereverse(n,seq);
 
 %% plot reverse seq
