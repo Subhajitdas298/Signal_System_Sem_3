@@ -4,7 +4,7 @@ clc;
 clear all;
 close all;
 
-%% take sequence from user
+% take sequence from user
 seq = input('Enter sequence : ' );
 origin = round(abs(input('Enter origin index (starting from 1) : ')));
 % set time range
@@ -18,10 +18,10 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 
-%% get reverse sequence
+% get reverse sequence
 [n_rev,seq_rev] = timereverse(n,seq);
 
-%% plot reverse seq
+% plot reverse seq
 subplot(2,1,2);
 stem(n_rev,seq_rev);
 title('Reversed Discrete Signal');

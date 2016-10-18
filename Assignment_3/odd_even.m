@@ -1,10 +1,10 @@
 % assignment 3 q 6
-% clear 
+%% clear 
 clc;
 clear;
 close all;
 
-% contimuious signal
+%% continuious signal
 % set t
 syms f(t);
 % set time
@@ -43,11 +43,10 @@ xlabel('t');
 ylabel('feven');
 grid on;
 
-% clear previous data
+%% clear previous data
 clear;
 
-% discrete signal
-
+%% discrete signal
 % take signal
 seq = input('Enter sequence f(n) : ');
 i = round(input('Index of seq (starting from 1) : '));

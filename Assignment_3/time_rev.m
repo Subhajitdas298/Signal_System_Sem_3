@@ -1,10 +1,10 @@
 % assignment 3 q 2
-% clear
+%% clear
 clc;
 clear all;
 close all;
 
-% creating plots for continuious waves
+%% creating plots for continuious waves
 % set t range
 t = 0:79;
 
@@ -27,10 +27,10 @@ xlabel('t');
 ylabel('Amplitude');
 grid on;
 
-% clearing workspace
+%% clearing workspace
 clear all;
 
-% creating plots for discrete wave
+%% creating plots for discrete wave
 % take sequence from user
 x = input('Enter a sequence : ' );
 origin = round(abs(input('Enter origin index (starting from 1) : ')));

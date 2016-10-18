@@ -1,12 +1,12 @@
 % assignment 3 q 4-5
-% clear
+%% clear
 clc;
 clear all;
 close all;
 
-% creating plots for continuious waves
+%% creating plots for continuious waves
 % set t range
-t = 0:1:79;
+t = 0:79;
 
 % take wave frequency from user
 f = input('Enter frequency of sine wave : ' );
@@ -38,7 +38,7 @@ xlabel('n');
 ylabel('Amplitude');
 grid on;
 
-% creating plots for discrete waves
+%% creating plots for discrete waves
 % set variables
 n = t;
 
