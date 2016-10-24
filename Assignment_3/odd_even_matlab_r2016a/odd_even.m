@@ -5,17 +5,17 @@ clear;
 close all;
 
 %% continuious signal
+% set t
+syms f(t);
 % set time
 time = 0:79;
 
-% set t
-syms t;
 % take signal
-f = input('Enter f(t) : ');
+f(t) = input('Enter f(t) : ');
 
 % generate f(time) and f(-time)
-y1 = subs(f,t,time);
-y2 = subs(f,t,-time);
+y1 = f(time);
+y2 = f(-time);
 
 % print original signal
 subplot(3,2,1);

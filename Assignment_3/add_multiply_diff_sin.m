@@ -1,10 +1,10 @@
 % assignment 3 q 1
-% clear
+%% clear
 clc;
 clear all;
 close all;
 
-% creating plots for sine waves
+%% creating plots for sine waves
 % set t range
 t = 0:79;
 
@@ -22,7 +22,7 @@ f = input('Frequency : ');
 ph = input('Phase : ') * pi/180;
 y2 = a*sin(2*pi*f*t+ph);
 
-% plot actual sine waves wave
+% plot actual sine waves
 subplot(4,2,1);
 plot(t,y1);
 title('Sine wave 1');
@@ -54,10 +54,10 @@ xlabel('t');
 ylabel('Amplitude');
 grid on;
 
-% clearing workspace
+%% clearing workspace
 clear all;
 
-% creating plots for discrete wave
+%% creating plots for discrete wave
 % set variables
 x1 = [1 2 4 5];
 x2 = [3 2 5 1];
