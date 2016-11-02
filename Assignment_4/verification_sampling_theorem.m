@@ -10,11 +10,14 @@ fm = input('Enter frequency : ');
 % take amplitude
 a = input('Enter amplitude : ');
 
+%% calculate period of input signal
+tm = 1/fm;
+
 %% plot actual wave
 % set n
-t = 0:200;
-s(1)=subplot(4,1,1);
-plot(t,a*sin(2*pi*fm*t));
+t = 0:tm/30:2*tm;
+s(1)=subplot(2,2,1);
+plot(t,a*sin(2*pi*fm*t),'r');
 title('Actual signal');
 xlabel('t');
 ylabel('Amplitude');
@@ -25,9 +28,14 @@ grid on;
 fs = [1.5*fm,2*fm,5*fm];
 
 for i = 2:4
-    s(i)=subplot(4,1,i);
+    s(i)=subplot(2,2,i);
+    % plot original
+    plot(t,a*sin(2*pi*fm*t),'r');
+    % hold for next stem in subplot
+    hold on
     % set samples
-    n = 0:1/fs(i-1):200;  % sampling period = 1/sampling freq
+    % sampling period = 1/sampling freq
+    n = 0:1/fs(i-1):2*tm;
     stem(n,a*sin(2*pi*fm*n));
     xlabel('t');
     ylabel('Amplitude');

@@ -9,31 +9,34 @@ close all;
 p = 1/60;   % here frequency is 60 hz
 % set n
 t = 0:p/50:10*p;
-s(1)=subplot(4,1,1);
-plot(t,5*sin(120*pi*t));
-title('Actual signal');
-xlabel('t');
-ylabel('Amplitude');
-grid on;
+% wave
+y = 5*sin(120*pi*t);
 
 %% plot sampled sequences
 % array for fs
 fs = [80,400,1000];
 
-for i = 2:4
-    s(i)=subplot(4,1,i);
+for i = 1:3
+    s(i)=subplot(3,1,i);
+    % plot original
+    plot(t,y);
+    hold on % hold plot
     % set samples
-    n = 0:1/fs(i-1):10*p;  % sampling period = 1/sampling freq
-    stem(n,5*sin(120*pi*n));
+    % sampling period = 1/sampling freq
+    n = 0:1/fs(i):10*p;
+    % wave
+    x = 5*sin(120*pi*n);
+    % plot samples
+    stem(n,x,'r');
     xlabel('t');
     ylabel('Amplitude');
     grid on;
 end
 
 % title every subplot
-title(s(2),'sample rate = 80');
-title(s(3),'sample rate = 400');
-title(s(4),'sample rate = 1000');
+title(s(1),'sample rate = 80');
+title(s(2),'sample rate = 400');
+title(s(3),'sample rate = 1000');
 
 % link all graph axis
-linkaxes([s(1),s(2),s(3),s(4)],'xy');
+linkaxes([s(1),s(2),s(3)],'xy');
