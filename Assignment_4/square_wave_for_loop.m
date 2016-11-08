@@ -32,12 +32,12 @@ for i = 1:cycles
 end
 
 % set n range
-n = 0:p/30:cycles*p-p/30;
+t = 0:p/30:cycles*p-p/30;
 
 %% plot actual waves
 % unipolar
 subplot(2,1,1);
-stem(n,uni);
+stem(t,uni);
 title('Unipolar');
 xlabel('t');
 ylabel('Amplitude');
@@ -45,7 +45,7 @@ grid on;
 
 % bipolar
 subplot(2,1,2);
-stem(n,bi);
+stem(t,bi);
 title('Bipolar');
 xlabel('t');
 ylabel('Amplitude');

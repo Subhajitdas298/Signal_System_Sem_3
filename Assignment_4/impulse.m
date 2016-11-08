@@ -7,7 +7,7 @@ close all;
 %% creating plots
 % generate impulse using impz
 % y gets amplitude matrix
-% n gets time axis
+% n gets x axis
 [y,n] = impz(5); %amplitude 5
 
 % plot actual wave

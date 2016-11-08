@@ -21,10 +21,10 @@ for i = 1:5
 end
 
 % set n range
-n = 0:p/40:5*p-p/40;
+t = 0:p/40:5*p-p/40;
 
 %% plot actual waves
-stem(n,y);
+stem(t,y);
 title('Bipolar sawtooth');
 xlabel('t');
 ylabel('Amplitude');

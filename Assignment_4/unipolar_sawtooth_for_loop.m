@@ -25,10 +25,10 @@ for i = 1:cycles
 end
 
 % set n range
-n = 0:p/30:cycles*p-p/30;
+t = 0:p/30:cycles*p-p/30;
 
 %% plot actual waves
-stem(n,y);
+stem(t,y);
 title('Unipolar sawtooth');
 xlabel('t');
 ylabel('Amplitude');
